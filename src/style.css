@@ -10,16 +10,15 @@ header {
 
 #bigcontainer {
   display: flex;
+  flex-direction: column;
 }
 
 #scoreboard-container {
-  width: 50%;
   margin-left: 2rem;
 }
 
 #newscore-container {
-  width: 50%;
-  margin: 1rem;
+  margin: 1rem 1rem 1rem 3rem;
 }
 
 #refresh {
@@ -31,11 +30,62 @@ header {
 #form {
   display: flex;
   flex-direction: column;
-  width: 30%;
   align-items: flex-end;
   margin-top: 1rem;
 }
 
 #name-input, #score-input {
   width: 100%;
+}
+
+#score-list {
+  border: 2px solid black;
+  list-style: none;
+  margin: 1rem;
+}
+
+#score-list li:nth-child(2n) {
+  background-color: rgb(25, 40, 126, 0.7);
+}
+
+.entry {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 481px) {
+  #bigcontainer {
+    flex-direction: row;
+  }
+
+  #scoreboard-container {
+    width: 50%;
+    margin-left: 2rem;
+  }
+  
+  #newscore-container {
+    width: 50%;
+    margin: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #form {
+    width: 80%;
+  }
+
+  #scoreboard-container {
+    width: 50%;
+    margin-left: 2rem;
+  }
+  
+  #newscore-container {
+    width: 50%;
+    margin: 1rem;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  #form {
+    width: 60%;
+  }
 }
