@@ -27,3 +27,9 @@ document.querySelector('#form').addEventListener('submit', (e) => {
 
   e.target.reset();
 });
+
+document.querySelector('#refresh').addEventListener('click', (e) => {
+  e.preventDefault();
+
+  window.location.reload();
+})
