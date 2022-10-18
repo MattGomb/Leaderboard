@@ -76,7 +76,6 @@ button {
   padding: 0.25rem;
 }
 
-
 @media screen and (min-width: 481px) {
   #bigcontainer {
     flex-direction: row;
