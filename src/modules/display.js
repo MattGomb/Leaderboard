@@ -10,7 +10,7 @@ export default class Display {
     return list;
   }
 
-  static addScoreToBoard( { name, scorevalue } ) {
+  static addScoreToBoard({ name, scorevalue }) {
     const newEntry = document.createElement('li');
     newEntry.setAttribute('class', 'entry');
 
