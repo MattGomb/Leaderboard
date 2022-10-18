@@ -4,11 +4,38 @@
   box-sizing: border-box;
 }
 
-#body-container {
-  display: flex;
-  
+header {
+  margin: 2rem 0 0 2rem;
 }
 
-h1 {
-  color: aqua;
+#bigcontainer {
+  display: flex;
+}
+
+#scoreboard-container {
+  width: 50%;
+  margin-left: 2rem;
+}
+
+#newscore-container {
+  width: 50%;
+  margin: 1rem;
+}
+
+#refresh {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: flex-end;
+  margin-top: 1rem;
+}
+
+#name-input, #score-input {
+  width: 100%;
 }
