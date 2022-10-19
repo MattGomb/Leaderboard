@@ -20,6 +20,8 @@ document.querySelector('#form').addEventListener('submit', (e) => {
   const scorevalue = document.querySelector('#score-input').value;
 
   AwesomeGame.sendScoreToApi(name, scorevalue).then(manageScores);
+  
+  e.target.reset();
 });
 
 document.querySelector('#refresh').addEventListener('click', (e) => {
