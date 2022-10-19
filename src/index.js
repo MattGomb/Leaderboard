@@ -1,15 +1,17 @@
-import Score from './modules/constructor.js';
-
-import Display from './modules/display.js';
-
-import Storage from './modules/storage.js';
-
 import './style.css';
 
-const container = document.querySelector('#score-list-container');
-container.innerHTML = '';
+import display from './modules/display.js';
 
-container.appendChild(Display.displayScores(Storage.getScores()));
+import AwesomeGame from './modules/apiMethods.js';
+
+const manageScores = async () => {
+  const scores = await AwesomeGame.getScoreFromApi();
+  scores.sort((a, b) => b.score - a.score);
+  const topScores = scores.slice(0, 10);
+  display.displayScores(topScores);
+};
+
+manageScores();
 
 document.querySelector('#form').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -17,13 +19,7 @@ document.querySelector('#form').addEventListener('submit', (e) => {
   const name = document.querySelector('#name-input').value;
   const scorevalue = document.querySelector('#score-input').value;
 
-  const score = new Score(name, scorevalue);
-
-  const list = document.querySelector('#score-list');
-
-  list.appendChild(Display.addScoreToBoard(score));
-
-  Storage.addScore(score);
+  AwesomeGame.sendScoreToApi(name, scorevalue).then(manageScores);
 
   e.target.reset();
 });
