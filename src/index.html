@@ -7,6 +7,31 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <main>
+    <header id="title">
+      <h1>Leaderboard</h1>
+    </header>
+    <section id="bigcontainer">
+      <section id="scoreboard-container">
+        <div id="refresh">
+          <p>Recent scores</p>
+          <button id="refresh-btn" type="button">Refresh</button>
+        </div>
+        <div id="score-list-container">
+          <ul id="score-list"></ul>
+        </div>
+      </section>
+      <section id="newscore-container">
+        <p>Add your score</p>
+        <form id="form" action="" method="get">
+          <label for="name" hidden>name: </label>
+          <input type="text" name="name" id="name-input" placeholder="Your name" required><br>
+          <label for="score" hidden>score: </label>
+          <input type="number" name="score" id="score-input" placeholder="Your score" required><br>
+          <button id="submit-btn" type="submit">Submit</button>
+        </form>
+      </section>
+    </section>
+  </main>
 </body>
 </html>
