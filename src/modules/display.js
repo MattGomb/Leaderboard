@@ -3,7 +3,7 @@ const display = {
     const list = document.querySelector('#score-list');
     list.innerHTML = '';
     for (let i = 0; i < highScores.length; i += 1) {
-      const newScore = document.createElement('li')
+      const newScore = document.createElement('li');
       newScore.classList.add('entry');
       list.appendChild(newScore);
 

@@ -1,4 +1,4 @@
-const myUrl= 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zhVH0QUTrG9OY1IgDyoq/scores/';
+const myUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zhVH0QUTrG9OY1IgDyoq/scores/';
 
 const AwesomeGame = {
   async sendScoreToApi(user, score) {
