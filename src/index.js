@@ -9,7 +9,7 @@ const manageScores = async () => {
   scores.sort((a, b) => b.score - a.score);
   const topScores = scores.slice(0, 10);
   display.displayScores(topScores);
-}
+};
 
 manageScores();
 
@@ -20,8 +20,7 @@ document.querySelector('#form').addEventListener('submit', (e) => {
   const scorevalue = document.querySelector('#score-input').value;
 
   AwesomeGame.sendScoreToApi(name, scorevalue).then(manageScores);
-
-})
+});
 
 document.querySelector('#refresh').addEventListener('click', (e) => {
   e.preventDefault();
