@@ -1,29 +1,23 @@
-export default class Display {
-  static displayScores(scores) {
-    const list = document.createElement('ul');
-    list.id = 'score-list';
-    if (scores.length !== 0) {
-      scores.forEach((score) => {
-        list.appendChild(Display.addScoreToBoard(score));
-      });
+const display = {
+  displayScores(highScores) {
+    const list = document.querySelector('#score-list');
+    list.innerHTML = '';
+    for (let i = 0; i < highScores.length; i += 1) {
+      const newScore = document.createElement('li')
+      newScore.classList.add('entry');
+      list.appendChild(newScore);
+
+      const user = document.createElement('p');
+      user.textContent = highScores[i].user.length > 20 ? 'Someone with a long name ;)' : highScores[i].user;
+      user.classList.add('name');
+      newScore.appendChild(user);
+
+      const score = document.createElement('p');
+      score.textContent = highScores[i].score.length > 10 ? 'A really big score ;)' : highScores[i].score;
+      score.classList.add('score');
+      newScore.appendChild(score);
     }
-    return list;
-  }
+  },
+};
 
-  static addScoreToBoard({ name, scorevalue }) {
-    const newEntry = document.createElement('li');
-    newEntry.setAttribute('class', 'entry');
-
-    const user = document.createElement('p');
-    user.classList.add('name');
-    user.textContent = name.length > 30 ? 'Someone with a long name ;)' : name;
-    newEntry.appendChild(user);
-
-    const scorevalue1 = document.createElement('p');
-    scorevalue1.classList.add('score');
-    scorevalue1.textContent = scorevalue.length > 10 ? 'A really big score ;)' : scorevalue;
-    newEntry.appendChild(scorevalue1);
-
-    return newEntry;
-  }
-}
+export default display;
