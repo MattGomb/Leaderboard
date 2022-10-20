@@ -14,13 +14,13 @@ body {
 }
 
 header {
-  padding: 2rem 0 0 2rem; 
+  padding: 2rem 0 0 2rem;
 }
 
 h1 {
   font-size: 3rem;
   font-weight: bold;
-  text-shadow: 2px 8px 6px rgba(0,0,0,0.3);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.3);
 }
 
 #bigcontainer {
@@ -134,8 +134,8 @@ h1 {
 }
 
 @keyframes load {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .entry .name {
@@ -189,6 +189,6 @@ button:active {
   }
 
   #newscore-container {
-    min-height: 476px ;
+    min-height: 476px;
   }
 }
