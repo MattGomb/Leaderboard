@@ -32,6 +32,8 @@
 
 7 - Press Enter to create your local clone.
 
+
+
 ### Prerequisites
 
 Installation of Node.js, Node Package Manager, webpack module bundler, and Babel
@@ -40,6 +42,8 @@ Functioning computer Internet connection Basic understanding of Git and GitHub
 ### Setup
 
 The setup of webpack (https://webpack.js.org/guides/getting-started/)
+
+Please read the documentation to get familiar with webpack!
 
 
 ### Install
@@ -59,11 +63,9 @@ No testing required
 
 ### Deployment
 
+## Author
 
-
-## Authors
-
-👤 **Author1**
+👤 **Mátyás Gombos**
 
 - GitHub: [@MattGomb](https://github.com/MattGomb)
 - Twitter: [@MtysGombos1](https://twitter.com/MtysGombos1)

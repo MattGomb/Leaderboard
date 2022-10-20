@@ -4,7 +4,7 @@ const display = {
     list.innerHTML = '';
     for (let i = 0; i < highScores.length; i += 1) {
       const newScore = document.createElement('li');
-      newScore.classList.add('entry');
+      newScore.classList.add('entry', `nr${[i]}`);
       list.appendChild(newScore);
 
       const user = document.createElement('p');
