@@ -11,7 +11,7 @@
 - webpack
 - Github, VSC
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo Link](https://mattgomb.github.io/Leaderboard/dist/)
 
