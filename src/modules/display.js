@@ -13,7 +13,7 @@ const display = {
       newScore.appendChild(user);
 
       const score = document.createElement('p');
-      score.textContent = highScores[i].score.length > 10 ? '99999999999 - maxed out! :)' : highScores[i].score;
+      score.textContent = highScores[i].score.length > 10 ? '99999999999 - maxed out! :)🥇' : highScores[i].score;
       score.classList.add('score');
       newScore.appendChild(score);
     }
