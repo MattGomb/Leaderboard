@@ -1,5 +1,4 @@
-const display = {
-  displayScores(highScores) {
+const displayScores = (highScores) => {
     const list = document.querySelector('#score-list');
     list.textContent = '';
     for (let i = 0; i < highScores.length; i += 1) {
@@ -13,11 +12,16 @@ const display = {
       newScore.appendChild(user);
 
       const score = document.createElement('p');
-      score.textContent = highScores[i].score.length > 10 ? '99999999999 - maxed out! :) 🥇' : highScores[i].score;
+      score.textContent = highScores[i].score.length > 10 ? '99999999999 - maxed out! :)' : highScores[i].score;
       score.classList.add('score');
       newScore.appendChild(score);
     }
-  },
-};
 
-export default display;
+    const score = document.getElementsByClassName('score');
+    score[0].textContent = highScores[0].score.length > 10 ? `99999999999 - maxed out! 🥇` : `${highScores[0].score} 🥇`;
+    score[1].textContent = `${highScores[1].score} 🥈`;
+    score[2].textContent = `${highScores[2].score} 🥉`;
+  };
+
+
+  export default displayScores;

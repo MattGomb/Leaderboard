@@ -1,6 +1,6 @@
 import './style.css';
 
-import display from './modules/display.js';
+import displayScores from './modules/display.js';
 
 import AwesomeGame from './modules/apiMethods.js';
 
@@ -8,10 +8,11 @@ const manageScores = async () => {
   const scores = await AwesomeGame.getScoreFromApi();
   scores.sort((a, b) => b.score - a.score);
   const topScores = scores.slice(0, 10);
-  display.displayScores(topScores);
+
+  displayScores(topScores);
 };
 
-manageScores();
+window.onload = manageScores();
 
 document.querySelector('#form').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -25,5 +26,5 @@ document.querySelector('#form').addEventListener('submit', (e) => {
 });
 
 document.querySelector('#refresh').addEventListener('click', () => {
-  document.getElementById('score-list-container').contentWindow.location.reload();
+  window.location.reload();
 });
