@@ -25,7 +25,5 @@ document.querySelector('#form').addEventListener('submit', (e) => {
 });
 
 document.querySelector('#refresh').addEventListener('click', (e) => {
-  e.preventDefault();
-
   window.location.reload();
 });
