@@ -25,5 +25,5 @@ document.querySelector('#form').addEventListener('submit', (e) => {
 });
 
 document.querySelector('#refresh').addEventListener('click', () => {
-  window.location.reload();
+  document.getElementById('score-list-container').contentWindow.location.reload();
 });
