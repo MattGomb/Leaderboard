@@ -137,12 +137,19 @@ button {
 
 button:hover {
   cursor: pointer;
-  background: radial-gradient(circle, white 30%, rgb(25, 40, 126, 0.7));
+  font-weight: bold;
+  transform: translateY(-1px);
+  box-shadow: 4px 6px rgb(25, 40, 126, 0.5);
 }
 
 button:active {
-  background: rgb(25, 40, 126, 0.7);
-  color: white;
+  transform: translateX(1px);
+  box-shadow: 2px 4px rgb(25, 40, 126, 0.5);
+}
+
+input:focus {
+  transform: translateY(-1px);
+  box-shadow: 2px 4px rgb(25, 40, 126, 0.5);
 }
 
 @media screen and (min-width: 481px) {
